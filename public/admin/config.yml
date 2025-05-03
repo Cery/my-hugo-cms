@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # 或者您的主分支名称
+  branch: master # 或者您的主分支名称
 
 # 这个设置允许在本地使用 Netlify CMS
 local_backend: true
