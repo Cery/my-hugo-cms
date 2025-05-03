@@ -5,6 +5,12 @@ backend:
 # 这个设置允许在本地使用 Netlify CMS
 local_backend: true
 
+baseURL: "https://my-hugo-cms.netlify.app/"
+languageCode: "zh-cn"
+title: "My Hugo Site"
+theme: "ananke"  # 注意不要加引号也行
+
+
 # 媒体文件存储位置
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
