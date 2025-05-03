@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main # 或者您的主分支名称
+
+# 这个设置允许在本地使用 Netlify CMS
+local_backend: true
+
+# 媒体文件存储位置
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts" # 在路由中使用，例如 /admin/collections/blog
+    label: "博客文章" # 在UI中显示的名称
+    folder: "content/posts" # 存储文件的文件夹
+    create: true # 允许用户创建新文件
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # 文件名模板
+    fields: # 字段，即每篇文章的前置元数据
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "特色图片", name: "featured_image", widget: "image", required: false}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "正文", name: "body", widget: "markdown"}
